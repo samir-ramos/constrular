@@ -31,12 +31,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr max-content;
-  padding-top: 3rem;
-  overflow: clip;
+  padding-top: 4rem;
+  overflow: auto;
 }
 
 #cabecalho {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem 0 1rem;
   background-color: var(--dark-green);
   color: var(--white);
   text-transform: uppercase;
@@ -53,8 +53,8 @@ body {
 }
 
 #logo__img {
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 #solicite__orcamento:hover {
@@ -90,7 +90,7 @@ p {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-size: 0.7rem;
   position: fixed;
   bottom: 0;
