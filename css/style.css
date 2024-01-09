@@ -4,8 +4,8 @@
   --dark-green: #2d6758;
   --dark-gray: #7c7c7c;
   --medium-green: #62bc97;
-  --medium-gray: ##7c847c;
-  --light-green: ##c9e2db;
+  --medium-gray: #7c847c;
+  --light-green: #c9e2db;
   --light-gray: #bcbcbc;
   --white: #fbfbfb;
 }
@@ -30,70 +30,61 @@ body {
   width: 100dvw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr max-content;
-  padding-top: 4rem;
-  overflow: auto;
+  grid-template-rows: repeat(2, max-content) 1fr max-content;
 }
 
 #cabecalho {
-  padding: 0.2rem 1rem 0 1rem;
   background-color: var(--dark-green);
   color: var(--white);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
   align-items: center;
-  justify-content: space-between;
-  font-size: 0.7rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#logo {
+  display: grid;
+  place-content: center;
 }
 
 #logo__img {
-  height: 3rem;
-  width: 3rem;
-}
-
-#solicite__orcamento:hover {
-  color: var(--medium-green);
+  height: 5rem;
 }
 
 #wrapper {
-  padding: 0.5rem 1rem;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 }
 
 #titulo {
-  font-size: 1.3rem;
-  text-align: justify;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  margin: 1rem auto;
 }
 
-.titulos__secoes {
-  font-size: 1rem;
-  text-align: justify;
+#wrapper section {
+  height: 100%;
+  padding: 0.5rem 1rem;
 }
 
-p {
-  font-size: 0.7rem;
-  text-align: justify;
+#wrapper section:nth-child(odd) {
+  background-color: var(--medium-green);
+  color: var(--white);
 }
 
 #rodape {
-  padding: 0.5rem 1rem;
   background-color: var(--dark-green);
   color: var(--white);
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 999;
+  padding: 0.4rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
 }
